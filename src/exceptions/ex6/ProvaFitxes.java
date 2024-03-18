@@ -26,7 +26,8 @@ public class ProvaFitxes {
                 ESCULL UNA OPCIÓ
                 1. AFEGIR NOVA OBRA
                 2. AFEGIR NOVA REVISTA
-                3. AFEGIR NOU VOLUM""");
+                3. AFEGIR NOU VOLUM
+                4. VEURE LLISTA""");
     }
     static void chooseOption(int option) {
         switch (option) {
@@ -40,6 +41,7 @@ public class ProvaFitxes {
                 addNewVolum();
                 break;
             case 4:
+                showAllList();
                 break;
             case 0:
                 System.out.println("El programa es tanca...");
@@ -51,7 +53,9 @@ public class ProvaFitxes {
         }
     }
     static void showAllList() {
-
+        for (Fitxa f : llistaFitxes) {
+            System.out.println(f);
+        }
     }
     static void addNewObra() {
         Scanner sc = new Scanner(System.in);
@@ -89,21 +93,25 @@ public class ProvaFitxes {
     static short introduceShort(String message) {
         Scanner sc = new Scanner(System.in);
         System.out.println(message);
+        short num = -1;
         try {
-            return sc.nextShort();
+            num = sc.nextShort();
         } catch (InputMismatchException e) {
             System.out.println("Error: No és un caràcter vàlid");
+            run();
         }
-        return -1;
+        return num;
     }
     static int introduceInteger(String message) {
         Scanner sc = new Scanner(System.in);
         System.out.println(message);
+        int num = -1;
         try {
-            return sc.nextInt();
+            num = sc.nextInt();
         } catch (InputMismatchException e) {
             System.out.println("Error: No és un caràcter vàlid");
+            run();
         }
-        return -1;
+        return num;
     }
 }
