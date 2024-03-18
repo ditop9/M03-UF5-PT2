@@ -1,4 +1,4 @@
-package ex6;
+package exceptions.ex6;
 
 public class Obra extends Fitxa {
     private String autor;

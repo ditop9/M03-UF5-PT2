@@ -1,4 +1,4 @@
-package ex6;
+package exceptions.ex6;
 
 public class Revista extends Fitxa{
     private short any;

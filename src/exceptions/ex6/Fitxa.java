@@ -1,4 +1,4 @@
-package ex6;
+package exceptions.ex6;
 
 import java.util.Objects;
 
